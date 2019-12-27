@@ -21,7 +21,7 @@
     }],
     "scripts": {
         "publish": "./vendor/bin/robo publish",
-        "spec": "./vendor/bin/robo spec"
+        "spec": "php spec.php"
     },
     "autoload": {
         "psr-4" : {
