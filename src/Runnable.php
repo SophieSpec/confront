@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Sophie\Confront;
 
-/**
- * Handle a callable.
- */
 final class Runnable implements RunnableInterface
 {
     /**

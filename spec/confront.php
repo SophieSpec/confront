@@ -23,7 +23,7 @@ try {
             yield [10, -20] => 0;
         }
     );
-} catch (Sophie\Confront\AssertionFailedException $e) {
+} catch (Sophie\Ensure\FailedAssertionException $e) {
     ++$failed;
 }
 

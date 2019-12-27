@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Sophie\Confront;
 
 use Closure;
+use Sophie\Ensure\StrictEqualityAssertion;
 
 /**
  * Test a runnable.
@@ -32,11 +33,11 @@ final class Testable implements TestableInterface
         /** @var mixed */
         foreach (($this->dataset)() as $args => $return) {
             $args = (array) $args;
-            if ($this->runnable->run(...$args) !== $return) {
-                throw new AssertionFailedException(
-                    'The callable has not returned a valid value'
-                );
-            }
+            $assertion = new StrictEqualityAssertion(
+                $this->runnable->run(...$args),
+                $return
+            );
+            $assertion->assert();
         }
     }
 }

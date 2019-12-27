@@ -30,7 +30,7 @@ $testable = new Sophie\Confront\Testable(
 $exceptions = 0;
 try {
     $testable->test();
-} catch (Sophie\Confront\AssertionFailedException $e) {
+} catch (Sophie\Ensure\FailedAssertionException $e) {
     ++$exceptions;
 }
 assert($exceptions === 1);
