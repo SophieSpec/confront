@@ -1,5 +1,5 @@
 {
-    "name": "sophie-spec/confront",
+    "name": "sophie-spec/versus",
     "description": "A proof-of-concept unit tester for callables",
     "keywords": [
         "unit",
@@ -25,10 +25,10 @@
     },
     "autoload": {
         "psr-4" : {
-            "Sophie\\Confront\\" : "src/"
+            "Sophie\\Versus\\" : "src/"
         },
         "files": [
-            "src/confront.php"
+            "src/versus.php"
         ]
     },
     "require": {

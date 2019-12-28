@@ -1,11 +1,11 @@
-# Confront
+# Versus
 
-Like [Ensure](https://github.com/SophieSpec/ensure), Confront is born with the thought that an ideal unit test should be a strict equality between the output of a function and its expected result. Confront is enlarging this concept so we can verify several inputs/ouputs with ease.
+Like [Ensure](https://github.com/SophieSpec/ensure), Versus is born with the thought that an ideal unit test should be a strict equality between the output of a function and its expected result. Versus enlarges Ensure tool so we can verify several inputs/ouputs with ease.
 
 ## Install
 
 ```sh
-composer require sophie-spec/confront
+composer require sophie-spec/versus
 ```
 
 ## Procedural API
@@ -13,13 +13,13 @@ composer require sophie-spec/confront
 To test a method with several inputs/outputs, we simply pass the callable and yield values from a generator:
 
 ```php
-use function Sophie\Confront\confront;
+use function Sophie\Versus\versus;
 
 $add = function ($a, $b) {
     return $a + $b;
 };
 
-confront($add, function () {
+versus($add, function () {
     yield [1, 2] => 3;
     yield [-2, -3] => -5;
     yield [10, -20] => -10;
@@ -29,7 +29,7 @@ confront($add, function () {
 If the assertion fails, a `Sophie\Ensure\FailedAssertionException` error is thrown with a detailed message:
 
 ```php
-confront($add, function () {
+versus($add, function () {
     yield [1, 2] => 100;
 });
 /*
@@ -45,15 +45,15 @@ confront($add, function () {
 
 ## Object API
 
-The `confront()` function is only a wrapper around the object API. Here's how to instantiate/use it:
+The `versus()` function is only a wrapper around the object API. Here's how to instantiate/use it:
 
 ```php
-confront($add, function () {
+versus($add, function () {
     yield [1, 2] => 3;
 });
 // ...is the same as:
-$testable = new Sophie\Confront\Testable(
-    new Sophie\Confront\Runnable($add),
+$testable = new Sophie\Versus\Testable(
+    new Sophie\Versus\Runnable($add),
     function () {
         yield [1, 2] => 3;
     }

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
-    sig(Sophie\Confront\confront::class)
+    sig(Sophie\Versus\versus::class)
         ->accepts('callable')
         ->returns('void');
 */
@@ -12,7 +12,7 @@ $called = 0;
 $failed = 0;
 
 try {
-    Sophie\Confront\confront(
+    Sophie\Versus\versus(
         function ($n1, $n2) use (&$called) {
             ++$called;
             return $n1 + $n2;
