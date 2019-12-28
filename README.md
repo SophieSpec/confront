@@ -5,10 +5,12 @@ Like [Ensure](https://github.com/SophieSpec/ensure), Versus is born with the tho
 ## Install
 
 ```sh
-composer require sophie-spec/versus
+composer require --dev sophie-spec/versus
 ```
 
-## Procedural API
+Requires PHP >= 7.4.
+
+## Use
 
 To test a method with several inputs/outputs, we simply pass the callable and yield values from a generator:
 
