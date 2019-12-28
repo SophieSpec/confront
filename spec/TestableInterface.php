@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
-    sig(Sophie\Confront\TestableInterface::class)
+    sig(Sophie\Versus\TestableInterface::class)
         ->method('test')
         ->accepts()
         ->returns('void');

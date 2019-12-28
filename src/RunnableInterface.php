@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Sophie\Confront;
+namespace Sophie\Versus;
 
 interface RunnableInterface
 {

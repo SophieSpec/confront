@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Sophie\Confront;
+namespace Sophie\Versus;
 
 use Closure;
 
 /**
  * Facade.
  */
-function confront(callable $callable, Closure $dataset): void
+function versus(callable $callable, Closure $dataset): void
 {
     $testable = new Testable(
         new Runnable($callable),
