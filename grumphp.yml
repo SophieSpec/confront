@@ -9,9 +9,6 @@ parameters:
         git_branch_name:
             whitelist:
                 - "/(feature|fix|hotfix)\\/[a-z0-9-]+/"
-            blacklist:
-                - master
-                - develop
         jsonlint:
             detect_key_conflicts: true
         phpcpd:
