@@ -9,9 +9,6 @@ parameters:
         git_branch_name:
             whitelist:
                 - "/(feature|fix|hotfix)\\/[a-z0-9-]+/"
-            blacklist:
-                - master
-                - develop
         jsonlint:
             detect_key_conflicts: true
         phpcpd:
@@ -21,17 +18,17 @@ parameters:
             config: .php_cs.dist
         # Disabling for now since pdepend does not fully support PHP 7.4
         # https://github.com/phpmd/phpmd/issues/700
-        #phpmd:
-        #    ruleset:
-        #        - codesize
-        #        - cleancode
-        #        - controversial
-        #        - design
-        #        - naming
-        #        - unusedcode
-        #    exclude:
-        #        - RoboFile.php
-        #        - spec
+        phpmd:
+           ruleset:
+               - codesize
+               - cleancode
+               - controversial
+               - design
+               - naming
+               - unusedcode
+           exclude:
+               - RoboFile.php
+               - spec
         phpmnd:
             exclude:
                 - RoboFile.php
