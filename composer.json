@@ -20,6 +20,7 @@
         "email": "dev@dreamysource.fr"
     }],
     "scripts": {
+        "git:init": "./vendor/bin/grumphp git:init",
         "publish": "./vendor/bin/robo publish",
         "spec": "php spec.php"
     },
