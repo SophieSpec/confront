@@ -45,24 +45,6 @@ versus($add, function () {
 */
 ```
 
-## Object API
-
-The `versus()` function is only a wrapper around the object API. Here's how to instantiate/use it:
-
-```php
-versus($add, function () {
-    yield [1, 2] => 3;
-});
-// ...is the same as:
-$testable = new Sophie\Versus\Testable(
-    new Sophie\Versus\Runnable($add),
-    function () {
-        yield [1, 2] => 3;
-    }
-);
-$testable->test();
-```
-
 ## License
 
 [MIT](http://dreamysource.mit-license.org).
