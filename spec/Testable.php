@@ -2,17 +2,6 @@
 
 declare(strict_types=1);
 
-/*
-    sig(Sophie\Versus\Testable::class)
-        ->implements(Sophie\Versus\TestableInterface::class);
-    sig(Sophie\Versus\Testable::class)
-        ->method('__construct')
-        ->accepts(
-            Sophie\Versus\RunnableInterface::class,
-            Generator::class
-        );
-*/
-
 $runnable = mock(Sophie\Versus\RunnableInterface::class);
 $runnable->expects()->run(1, 2)->andReturns(3);
 $runnable->expects()->run(-20)->andReturns(-20);

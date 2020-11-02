@@ -2,12 +2,6 @@
 
 declare(strict_types=1);
 
-/*
-    sig(Sophie\Versus\versus::class)
-        ->accepts('callable')
-        ->returns('void');
-*/
-
 $called = 0;
 $failed = 0;
 
